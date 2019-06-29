@@ -9,12 +9,13 @@ export default class TodoList extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.clearInputField = this.clearInputField.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
 
         this.state = {
             todos: [
-                { desc: 'water the plants' },
-                { desc: 'budget' },
-                { desc: 'do laundry' }
+                { desc: 'do laundry', complete: false, id: 3 },
+                { desc: 'budget', complete: false, id: 2 },
+                { desc: 'water the plants', complete: false, id: 1 }
             ]
         }
     }
@@ -24,23 +25,29 @@ export default class TodoList extends Component {
         this.setState({newTodo: ''})
     }
 
+    handleDelete() {
+        let todos = [...this.state.todos];
+        todos = todos.id.indexOf(this.id).splice();
+        this.setState({todos: [...todos]})
+    }
+
     handleChange(e) {
         this.setState({newTodo: e.target.value})
     }
 
     handleSubmit(e) {
         e.preventDefault();
+        let idIncrementer = this.state.todos.length;
         this.setState(
-            {todos: [...this.state.todos, {desc: this.state.newTodo}]}
+            {todos: [{desc: this.state.newTodo, complete: false, id: idIncrementer+1 }, ...this.state.todos]}
         )
         this.clearInputField();
-        alert('hey, a todo was added');
     }
 
     render() {
         let todos;
         todos = this.state.todos.map(todo => {
-            return <TodoItem>{todo}</TodoItem>
+            return <TodoItem onClick={this.handleDelete} key={todo.id.toString()}>{todo}</TodoItem>
         });
 
         return (
@@ -50,7 +57,9 @@ export default class TodoList extends Component {
                 </form>
                 <table className='TodoList'>
                     <tbody>
-                        {todos}
+                        <tr>
+                            {todos}
+                        </tr>
                     </tbody>
                 </table>
             </div>

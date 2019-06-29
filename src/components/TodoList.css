@@ -1,0 +1,10 @@
+.TodoList {
+    display: flex;
+    flex-direction: column;
+    border-collapse: collapse;
+    border: 1px solid #e1e1e1;
+}
+
+.form {
+    border: 1px solid #e1e1e1;
+}

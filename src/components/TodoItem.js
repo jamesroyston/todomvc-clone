@@ -4,7 +4,10 @@ import './TodoItem.css';
 const TodoItem = (props) => {
     return (
         <td className='TodoItem'>
-            {props.children.desc}
+            <span className="deleteButton"></span>
+            <span className="content">
+                {props.children.desc}
+            </span>
         </td>
     );
 }

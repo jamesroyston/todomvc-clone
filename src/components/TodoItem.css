@@ -1,9 +1,21 @@
 .TodoItem {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 340px;
     border: 1px solid #e1e1e1;
     height: 45px;
     font-size: 24px;
+}
+
+.deleteButton {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid #e1e1e1;
+    margin: 4px;
+}
+
+.content {
+    margin-left: 40px;
 }

@@ -8,6 +8,7 @@ export default class TodoList extends Component {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.clearInputField = this.clearInputField.bind(this);
 
         this.state = {
             todos: [
@@ -16,6 +17,11 @@ export default class TodoList extends Component {
                 { desc: 'do laundry' }
             ]
         }
+    }
+
+    clearInputField() {
+        document.getElementById('input').reset();
+        this.setState({newTodo: ''})
     }
 
     handleChange(e) {
@@ -27,6 +33,7 @@ export default class TodoList extends Component {
         this.setState(
             {todos: [...this.state.todos, {desc: this.state.newTodo}]}
         )
+        this.clearInputField();
         alert('hey, a todo was added');
     }
 
@@ -38,7 +45,7 @@ export default class TodoList extends Component {
 
         return (
             <div>
-                <form className='form' onSubmit={this.handleSubmit}> 
+                <form id="input" className='form' onSubmit={this.handleSubmit}> 
                     <InputField handleChange={this.handleChange} />
                 </form>
                 <table className='TodoList'>

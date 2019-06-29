@@ -38,15 +38,15 @@ export default class TodoList extends Component {
 
         return (
             <div>
-            <form className='form' onSubmit={this.handleSubmit}> 
-                <InputField handleChange={this.handleChange} />
-            </form>
-              <table className='TodoList'>
-                  <tbody>
-                  {todos}
-                  </tbody>
-              </table>
-          </div>
+                <form className='form' onSubmit={this.handleSubmit}> 
+                    <InputField handleChange={this.handleChange} />
+                </form>
+                <table className='TodoList'>
+                    <tbody>
+                        {todos}
+                    </tbody>
+                </table>
+            </div>
         );
 
     }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TodoItem from './TodoItem';
-import InputField from './InputField';
+import InputForm from './InputForm';
 import './TodoList.css';
 
 export default class TodoList extends Component {
@@ -9,13 +9,12 @@ export default class TodoList extends Component {
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.clearInputField = this.clearInputField.bind(this);
-		this.markDone = this.markDone.bind(this);
 
 		this.state = {
 			todos: [
-				{ desc: 'do laundry', complete: false, id: 1, classList: '' },
-				{ desc: 'budget', complete: true, id: 2, classList: '' },
-				{desc: 'water the plants', complete: true, id: 3, classList: '' }
+				{ desc: 'do laundry', complete: false, id: 1, classList: '', edit: false },
+				{ desc: 'budget', complete: true, id: 2, classList: '', edit: false },
+				{desc: 'water the plants', complete: true, id: 3, classList: '', edit: false }
 			]
 		};
 	}
@@ -33,6 +32,8 @@ export default class TodoList extends Component {
     
 	update(id) {
 		console.log('update', id);
+        
+
 	}
     
 	markDone(id) {
@@ -72,17 +73,16 @@ export default class TodoList extends Component {
 				markDone={this.markDone.bind(this, todo.id)}
 				update={this.update.bind(this, todo.id)} 
 				key={todo.id.toString()}
-				id={todo.id}
-				classList={todo.classList}>
+				id={todo.id}>
 				{todo}
 			</TodoItem>;
 		});
 
 		return (
 			<div>
-				<form id="input" className='form' onSubmit={this.handleSubmit}> 
-					<InputField handleChange={this.handleChange} />
-				</form>
+				<InputForm  
+					handleSubmit={this.handleSubmit}
+					handleChange={this.handleChange} />
 				<table className='TodoList'>
 					<tbody>
 						<tr>

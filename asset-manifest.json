@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/todomvc-clone/static/css/main.08763e78.chunk.css",
-    "main.js": "/todomvc-clone/static/js/main.6e9157db.chunk.js",
-    "main.js.map": "/todomvc-clone/static/js/main.6e9157db.chunk.js.map",
+    "main.css": "/todomvc-clone/static/css/main.4fea69eb.chunk.css",
+    "main.js": "/todomvc-clone/static/js/main.9806ae71.chunk.js",
+    "main.js.map": "/todomvc-clone/static/js/main.9806ae71.chunk.js.map",
     "runtime~main.js": "/todomvc-clone/static/js/runtime~main.072f2893.js",
     "runtime~main.js.map": "/todomvc-clone/static/js/runtime~main.072f2893.js.map",
     "static/js/2.63806143.chunk.js": "/todomvc-clone/static/js/2.63806143.chunk.js",
     "static/js/2.63806143.chunk.js.map": "/todomvc-clone/static/js/2.63806143.chunk.js.map",
     "index.html": "/todomvc-clone/index.html",
-    "precache-manifest.6d016e35ca15b36e469586811b3a138d.js": "/todomvc-clone/precache-manifest.6d016e35ca15b36e469586811b3a138d.js",
+    "precache-manifest.06c8da43daaf156a46f239221464da91.js": "/todomvc-clone/precache-manifest.06c8da43daaf156a46f239221464da91.js",
     "service-worker.js": "/todomvc-clone/service-worker.js",
-    "static/css/main.08763e78.chunk.css.map": "/todomvc-clone/static/css/main.08763e78.chunk.css.map"
+    "static/css/main.4fea69eb.chunk.css.map": "/todomvc-clone/static/css/main.4fea69eb.chunk.css.map"
   }
 }

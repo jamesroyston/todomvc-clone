@@ -2,7 +2,7 @@ import React from 'react';
 import './InputForm.css';
 
 const InputForm = props => {
-	return (
+	return <th>
 		<form id="input" className='form' onSubmit={props.handleSubmit}>
 			<input 
 				type='text' 
@@ -10,7 +10,7 @@ const InputForm = props => {
 				className='InputField' 
 				onChange={props.handleChange}/>
 		</form>
-	);
+	</th>;
 };
 
 export default InputForm;

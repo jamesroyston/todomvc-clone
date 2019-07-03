@@ -14,7 +14,9 @@ export default class TodoList extends Component {
 			todos: [
 				{ desc: 'do laundry', complete: false, id: 1, classList: '', edit: false },
 				{ desc: 'budget', complete: true, id: 2, classList: '', edit: false },
-				{desc: 'water the plants', complete: true, id: 3, classList: '', edit: false }
+				{desc: 'water the plants', complete: true, id: 3, classList: '', edit: false },
+				{desc: 'code', complete: false, id: 4, classList: '', edit: false },
+				{desc: 'call Mom', complete: false, id: 5, classList: '', edit: false }
 			]
 		};
 	}
@@ -24,16 +26,25 @@ export default class TodoList extends Component {
 		this.setState({newTodo: ''});
 	}
 
-	// handleDelete() {
-	// 	let todos = [...this.state.todos];
-	// 	todos = todos.id.indexOf(this.id).splice();
-	// 	this.setState({todos: [...todos]});
-	// }
+	delete(id) {
+		let todos = [...this.state.todos];
+		todos = todos.filter((todo) => {
+			return todo.id !== id;
+		});
+		this.setState({
+			todos: [...todos]
+		});
+	}
     
 	update(id) {
-		console.log('update', id);
-        
-
+		alert('update', id);
+		// let todos = [...this.state.todos];
+		// todos = todos.filter((todo) => {
+		// 	return todo.id !== id;
+		// });
+		// this.setState({
+		// 	todos: [...todos]
+		// });
 	}
     
 	markDone(id) {
@@ -69,28 +80,28 @@ export default class TodoList extends Component {
 	render() {
 		let todos;
 		todos = this.state.todos.map(todo => {
-			return <TodoItem 
-				markDone={this.markDone.bind(this, todo.id)}
-				update={this.update.bind(this, todo.id)} 
-				key={todo.id.toString()}
-				id={todo.id}>
-				{todo}
-			</TodoItem>;
+			return <tr>
+				<TodoItem 
+					markDone={this.markDone.bind(this, todo.id)}
+					update={this.update.bind(this, todo.id)}
+					delete={this.delete.bind(this, todo.id)}
+					key={todo.id.toString()}
+					id={todo.id}>
+					{todo}
+				</TodoItem>
+			</tr>;
 		});
 
 		return (
-			<div>
-				<InputForm  
-					handleSubmit={this.handleSubmit}
-					handleChange={this.handleChange} />
-				<table className='TodoList'>
-					<tbody>
-						<tr>
-							{todos}
-						</tr>
-					</tbody>
-				</table>
-			</div>
+			<table className='TodoList'>
+				<tbody>
+					<InputForm  
+						handleSubmit={this.handleSubmit}
+						handleChange={this.handleChange} />
+
+					{todos}
+				</tbody>
+			</table>
 		);
 
 	}

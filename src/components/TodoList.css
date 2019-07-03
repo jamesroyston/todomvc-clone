@@ -1,8 +1,13 @@
 .TodoList {
-    display: flex;
-    flex-direction: column;
     border-collapse: collapse;
     border: 1px solid #e1e1e1;
+    width: 80%;
+}
+
+@media (max-width: 400px) {
+    .TodoList {
+        width: 100%;
+    }
 }
 
 .form {

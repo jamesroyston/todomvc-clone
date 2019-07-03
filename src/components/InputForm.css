@@ -1,9 +1,9 @@
 .InputField {
     text-align: center;
-    
-    width: 340px;
     border: 1px solid #e1e1e1;
+    box-sizing: border-box;
     height: 45px;
+    width: 100%;
     font-size: 24px;
 
     background: #dadada;

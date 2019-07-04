@@ -19,7 +19,7 @@ const TodoItem = (props) => {
 			<span className="delete-circle" 
 				onClick={props.delete}>
 				<div class="x-button">
-					<em>-</em>
+					x
 				</div>
 			</span>
 		</div>

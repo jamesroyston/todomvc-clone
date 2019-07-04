@@ -27,6 +27,7 @@
     position: relative;
     vertical-align: top;
     border-radius: 50%;
+    cursor: pointer;
   }
   
   .load-complete {
@@ -63,11 +64,10 @@
     align-content: center;
     width: 30px;
     height: 30px;
-    border: 1px solid rgba(233, 12, 12, 0.6);
-    border-radius: 50%;
+    cursor: pointer;
   }
   .x-button {
-    color: rgba(233, 12, 12, 0.6)
+    color: rgba(233, 12, 12, 0.356)
   }
   
   /* @keyframes loader-spin {

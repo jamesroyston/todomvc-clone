@@ -12,7 +12,7 @@ export default class TodoList extends Component {
 
 		this.state = {
 			todos: [
-				{ desc: 'do laundry', complete: false, id: 1, classList: '', edit: false },
+				{ desc: 'do laundry', complete: false, id: 1, classList: '', edit: true },
 				{ desc: 'budget', complete: true, id: 2, classList: '', edit: false },
 				{desc: 'water the plants', complete: true, id: 3, classList: '', edit: false },
 				{desc: 'code', complete: false, id: 4, classList: '', edit: false },
@@ -38,10 +38,17 @@ export default class TodoList extends Component {
     
 	update(id) {
 		alert('update', id);
-		// let todos = [...this.state.todos];
-		// todos = todos.filter((todo) => {
-		// 	return todo.id !== id;
-		// });
+		
+		let todos = [...this.state.todos];
+		todos = todos.filter((todo) => {
+			if (todo.edit === false) {
+				return [
+					<InputForm  
+						handleSubmit={this.handleSubmit}
+						handleChange={this.handleChange} />,
+					...todos];
+			}
+		});
 		// this.setState({
 		// 	todos: [...todos]
 		// });

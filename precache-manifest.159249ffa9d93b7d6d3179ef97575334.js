@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c91c37f8f5b4d306e1fd8a65c20793e5",
+    "revision": "f6ae7913705ea67593de6e5aa6914825",
     "url": "/todomvc-clone/index.html"
   },
   {

@@ -13,12 +13,6 @@
 	font-family: Helvetica, sans-serif;
 }
 
-@media (max-width: 400px) {
-	.App {
-		font-size: 0.7em;
-	}
-}
-
 textarea,
 input.text,
 input[type="text"],

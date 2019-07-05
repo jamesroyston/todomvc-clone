@@ -24,6 +24,7 @@
 @media (max-width: 400px) {
     .TodoListContainer {
         width: 100%;
+        font-size: 0.7em;
     }
 }
 

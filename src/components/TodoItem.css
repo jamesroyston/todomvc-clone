@@ -62,13 +62,13 @@
   .delete-circle {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     width: 30px;
     height: 30px;
     cursor: pointer;
   }
-  .x-button {
-    color: rgba(233, 12, 12, 0.356)
+  .red {
+    color: rgba(151, 39, 39, 0.877)
   }
   
   /* @keyframes loader-spin {

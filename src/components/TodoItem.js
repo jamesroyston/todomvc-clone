@@ -1,5 +1,7 @@
 import React from 'react';
 import './TodoItem.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const TodoItem = (props) => {
 	return (
@@ -18,9 +20,7 @@ const TodoItem = (props) => {
 
 			<span className="delete-circle" 
 				onClick={props.delete}>
-				<div class="x-button">
-					x
-				</div>
+				<FontAwesomeIcon icon={faTrash} className="red" />
 			</span>
 		</div>
 	);

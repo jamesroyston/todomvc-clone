@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TodoItem from './TodoItem';
 import InputForm from './InputForm';
+import Header from './Header';
 import './TodoList.css';
 
 export default class TodoList extends Component {
@@ -12,11 +13,11 @@ export default class TodoList extends Component {
 
 		this.state = {
 			todos: [
-				{ desc: 'do laundry', complete: false, id: 1, classList: '', edit: true },
-				{ desc: 'budget', complete: true, id: 2, classList: '', edit: false },
-				{desc: 'water the plants', complete: true, id: 3, classList: '', edit: false },
-				{desc: 'code', complete: false, id: 4, classList: '', edit: false },
-				{desc: 'call Mom', complete: false, id: 5, classList: '', edit: false }
+				// { desc: 'do laundry', complete: false, id: 1, classList: '', edit: true },
+				// { desc: 'budget', complete: true, id: 2, classList: '', edit: false },
+				// {desc: 'water the plants', complete: true, id: 3, classList: '', edit: false },
+				// {desc: 'code', complete: false, id: 4, classList: '', edit: false },
+				// {desc: 'call Mom', complete: false, id: 5, classList: '', edit: false }
 			]
 		};
 	}
@@ -87,7 +88,7 @@ export default class TodoList extends Component {
 	render() {
 		let todos;
 		todos = this.state.todos.map(todo => {
-			return <tr>
+			return <li>
 				<TodoItem 
 					markDone={this.markDone.bind(this, todo.id)}
 					update={this.update.bind(this, todo.id)}
@@ -96,19 +97,21 @@ export default class TodoList extends Component {
 					id={todo.id}>
 					{todo}
 				</TodoItem>
-			</tr>;
+			</li>;
 		});
 
 		return (
-			<table className='TodoList'>
-				<tbody>
+			<div className="TodoListContainer">
+				<Header />
+				<ul className='TodoList'>
 					<InputForm  
 						handleSubmit={this.handleSubmit}
 						handleChange={this.handleChange} />
 
 					{todos}
-				</tbody>
-			</table>
+				</ul>
+
+			</div>
 		);
 
 	}

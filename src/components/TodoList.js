@@ -12,13 +12,8 @@ export default class TodoList extends Component {
 		this.clearInputField = this.clearInputField.bind(this);
 
 		this.state = {
-			todos: [
-				// { desc: 'do laundry', complete: false, id: 1, classList: '', edit: true },
-				// { desc: 'budget', complete: true, id: 2, classList: '', edit: false },
-				// {desc: 'water the plants', complete: true, id: 3, classList: '', edit: false },
-				// {desc: 'code', complete: false, id: 4, classList: '', edit: false },
-				// {desc: 'call Mom', complete: false, id: 5, classList: '', edit: false }
-			]
+			idIncrementer: 0,
+			todos: []
 		};
 	}
 
@@ -26,7 +21,7 @@ export default class TodoList extends Component {
 		document.getElementById('input').reset();
 		this.setState({newTodo: ''});
 	}
-
+	
 	delete(id) {
 		let todos = [...this.state.todos];
 		todos = todos.filter((todo) => {
@@ -38,18 +33,18 @@ export default class TodoList extends Component {
 	}
     
 	update(id) {
-		alert('update', id);
+		// alert('update', id);
 		
-		let todos = [...this.state.todos];
-		todos = todos.filter((todo) => {
-			if (todo.edit === false) {
-				return [
-					<InputForm  
-						handleSubmit={this.handleSubmit}
-						handleChange={this.handleChange} />,
-					...todos];
-			}
-		});
+		// let todos = [...this.state.todos];
+		// todos = todos.filter((todo) => {
+		// 	if (todo.edit === false) {
+		// 		return [
+		// 			<InputForm  
+		// 				handleSubmit={this.handleSubmit}
+		// 				handleChange={this.handleChange} />,
+		// 			...todos];
+		// 	}
+		// });
 		// this.setState({
 		// 	todos: [...todos]
 		// });
@@ -75,11 +70,10 @@ export default class TodoList extends Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		let idIncrementer = this.state.todos.length;
 		this.setState({
 			todos: [
 				...this.state.todos,
-				{desc: this.state.newTodo, complete: false, id: idIncrementer+1 }
+				{desc: this.state.newTodo, complete: false, id: this.state.idIncrementer++ }
 			]
 		});
 		this.clearInputField();
@@ -88,16 +82,14 @@ export default class TodoList extends Component {
 	render() {
 		let todos;
 		todos = this.state.todos.map(todo => {
-			return <li>
-				<TodoItem 
-					markDone={this.markDone.bind(this, todo.id)}
-					update={this.update.bind(this, todo.id)}
-					delete={this.delete.bind(this, todo.id)}
-					key={todo.id.toString()}
-					id={todo.id}>
-					{todo}
-				</TodoItem>
-			</li>;
+			return <TodoItem 
+				markDone={this.markDone.bind(this, todo.id)}
+				update={this.update.bind(this, todo.id)}
+				delete={this.delete.bind(this, todo.id)}
+				key={todo.id.toString()}
+				id={todo.id}>
+				{todo}
+			</TodoItem>;
 		});
 
 		return (

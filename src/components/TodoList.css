@@ -8,7 +8,7 @@
 }
 
 .TodoListContainer {
-    width: 80%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,15 +21,22 @@
     margin: 0 auto;
 }
 
+@media (min-width: 810px) {
+    .TodoListContainer {
+        width: 75%;
+    }
+}
+
+@media (max-width: 575px) {
+    .TodoListContainer {
+        width: 70%;
+        font-size: 0.8em;
+    }
+}
+
 @media (max-width: 400px) {
     .TodoListContainer {
         width: 100%;
         font-size: 0.7em;
-    }
-}
-
-@media (min-width: 810px) {
-    .TodoListContainer {
-        width: 60%;
     }
 }

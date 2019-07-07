@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c0e8afcc44c05bcf6d2f5eca482f8ca7",
+    "revision": "e9c75fdb5859035cee9da879a0fa394c",
     "url": "/todomvc-clone/index.html"
   },
   {
-    "revision": "aaea7dda596725460876",
+    "revision": "6e91ab6609129c494028",
     "url": "/todomvc-clone/static/css/main.d393589d.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/todomvc-clone/static/js/2.9992ff62.chunk.js"
   },
   {
-    "revision": "aaea7dda596725460876",
-    "url": "/todomvc-clone/static/js/main.c846777f.chunk.js"
+    "revision": "6e91ab6609129c494028",
+    "url": "/todomvc-clone/static/js/main.94c0622c.chunk.js"
   },
   {
     "revision": "61434f987bc2f428facd",

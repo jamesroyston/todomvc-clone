@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/todomvc-clone/static/css/main.d393589d.chunk.css",
+    "main.css": "/todomvc-clone/static/css/main.bf5bd263.chunk.css",
     "main.js": "/todomvc-clone/static/js/main.472940ad.chunk.js",
     "main.js.map": "/todomvc-clone/static/js/main.472940ad.chunk.js.map",
     "runtime~main.js": "/todomvc-clone/static/js/runtime~main.072f2893.js",
@@ -8,8 +8,8 @@
     "static/js/2.4cf26ad8.chunk.js": "/todomvc-clone/static/js/2.4cf26ad8.chunk.js",
     "static/js/2.4cf26ad8.chunk.js.map": "/todomvc-clone/static/js/2.4cf26ad8.chunk.js.map",
     "index.html": "/todomvc-clone/index.html",
-    "precache-manifest.161a0a5ad25dfc2f027930fce9ea9698.js": "/todomvc-clone/precache-manifest.161a0a5ad25dfc2f027930fce9ea9698.js",
+    "precache-manifest.15569f1ff50fb597a0d63abb5c7958e1.js": "/todomvc-clone/precache-manifest.15569f1ff50fb597a0d63abb5c7958e1.js",
     "service-worker.js": "/todomvc-clone/service-worker.js",
-    "static/css/main.d393589d.chunk.css.map": "/todomvc-clone/static/css/main.d393589d.chunk.css.map"
+    "static/css/main.bf5bd263.chunk.css.map": "/todomvc-clone/static/css/main.bf5bd263.chunk.css.map"
   }
 }

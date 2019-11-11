@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React, { Component } from 'react';
 import TodoItem from './TodoItem';
 import InputForm from './InputForm';
@@ -12,8 +13,12 @@ export default class TodoList extends Component {
 		this.clearInputField = this.clearInputField.bind(this);
 
 		this.state = {
-			idIncrementer: 0,
-			todos: []
+			idIncrementer: 1,
+			todos: [{ 
+				desc: 'write tests :)', 
+				complete: false, 
+				id: 1
+			}]
 		};
 	}
 
@@ -30,24 +35,6 @@ export default class TodoList extends Component {
 		this.setState({
 			todos: [...todos]
 		});
-	}
-    
-	update(id) {
-		// alert('update', id);
-		
-		// let todos = [...this.state.todos];
-		// todos = todos.filter((todo) => {
-		// 	if (todo.edit === false) {
-		// 		return [
-		// 			<InputForm  
-		// 				handleSubmit={this.handleSubmit}
-		// 				handleChange={this.handleChange} />,
-		// 			...todos];
-		// 	}
-		// });
-		// this.setState({
-		// 	todos: [...todos]
-		// });
 	}
     
 	markDone(id) {

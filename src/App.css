@@ -1,3 +1,7 @@
+html, body {
+	background-color: #282c34;
+}
+
 .App {
 	box-sizing: border-box;
 	padding: 3em 0 3em 0;
